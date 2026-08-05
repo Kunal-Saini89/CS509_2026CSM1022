@@ -7,7 +7,7 @@
 
 using namespace std;
 
-void convert(string path , vector<int> &row_ptr, vector<int> &col_idx , vector<int> &values , bool needwieght = true)
+int convert(string path , vector<int> &row_ptr, vector<int> &col_idx , vector<int> &values , bool needwieght = true) // return source here 
 {
     ifstream file(path);
     if(!file.is_open())
@@ -48,6 +48,7 @@ void convert(string path , vector<int> &row_ptr, vector<int> &col_idx , vector<i
         }
     }
     row_ptr.push_back(col_idx.size());
+    return 0;
 }
 
 int main()
