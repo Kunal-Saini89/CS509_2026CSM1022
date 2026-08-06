@@ -122,17 +122,13 @@ void printGEMM_Simple(string path)
     cout << "Algorithm name : GEMM Simple\n" << "Result matrix: " <<endl;
 
     multiplysimple();
-
-    //printmc();
 }
 
-void printGEMM_Blocking(String path , int bs)
+void printGEMM_Blocking(string path , int bs)
 {
     take_matrix_input(path);//filling up A and B matrices for multiplication
     
     cout << "Algorithm name : GEMM Blocking\n" << "Result matrix: " <<endl;
 
     multiplyblocking(bs);
-
-    //printmc();
 }

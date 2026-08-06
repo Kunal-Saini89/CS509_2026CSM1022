@@ -1,9 +1,9 @@
 #include <iostream>
-#include "../CSR_Implementation.cpp"
+#include "../src/CSR_Implementation.cpp"
 
 using namespace std;
 
-void runCSR(string path)
+void runCSR(string path , bool needweight)
 {
-    printCSR();
+    printCSR(path , needweight);
 }

@@ -1,9 +1,9 @@
 #include <iostream>
-#include "../GEMM.cpp"
+#include "../src/GEMM.cpp"
 
 using namespace std;
 
-void runGEMM_Simple(string path , int bs)
+void runGEMM_Simple(string path)
 {
     take_matrix_input(path);
     cout << "Algorithm name : GEMM Simple\n" << "Result matrix: " <<endl;
@@ -16,10 +16,10 @@ void runGEMM_Simple(string path , int bs)
 
     printmc();
 
-    cout << "Execution time : " << sduration.count() << "ms" << endl;
+    cout << "Execution time : " << duration.count() << "ms" << endl;
 }
 
-void runGEMM_Bloncking(string path , int bs)
+void runGEMM_Blocking(string path , int bs)
 {
     cout << "Algorithm name : GEMM Blocking\n" << "Result matrix: " <<endl;
     auto start = chrono::high_resolution_clock::now();

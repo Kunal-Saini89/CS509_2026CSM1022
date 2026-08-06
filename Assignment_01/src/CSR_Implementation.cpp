@@ -53,12 +53,12 @@ int convert(string path , vector<int> &row_ptr, vector<int> &col_idx , vector<in
     return x;
 }
 
-void printCSR()
+void printCSR(string path , bool needwieght = false)
 {
     vector<int> row_ptr , col_idx , values;
     auto start = chrono::high_resolution_clock::now();
 
-    convert("Input.txt" , row_ptr , col_idx , values , false);
+    convert(path , row_ptr , col_idx , values , needwieght);
 
     auto end = chrono::high_resolution_clock::now();
     chrono::duration<double, milli> duration = end - start;
